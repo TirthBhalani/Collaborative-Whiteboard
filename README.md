@@ -2,7 +2,7 @@
 
 Transform your virtual collaboration with our intuitive, real-time collaborative whiteboard application. Experience seamless digital interaction where teams can brainstorm, sketch, and communicate ideas effortlessly.
 
-**Live Demo:** [Try it now](https://collab-whiteboard.render.com)
+**Live Demo:** [Try it now](https://collaborative-whiteboard-bfk0.onrender.com)
 
 ## Overview
 
@@ -55,7 +55,7 @@ node server.js
 
 4. Access the whiteboard:
 ```
-http://localhost:5501
+http://localhost:5500
 ```
 
 ## Technical Architecture
@@ -90,7 +90,6 @@ http://localhost:5501
 - Undo/Redo: Navigate through changes
 - Clear All: Fresh canvas with one click
 - Export: Save work as image files
-- Fullscreen: Maximize workspace
 
 ## Development
 
@@ -111,30 +110,11 @@ npm install express socket.io
 touch .env
 
 # Add required variables
-PORT=5501
+PORT=5500
 ```
-
-## Join the Community
-
-### How to Contribute
-1. Fork the repository
-2. Create your enhancement branch
-3. Implement your changes
-4. Submit a pull request
-
-### Support
-- Create an issue on GitHub
-- Contact: [Your Support Email]
-
-## License
-
-Released under the MIT License. See LICENSE file for details.
-
 ---
 
 <div align="center">
-
-**[Live Demo](https://collab-whiteboard.render.com) | [Report Bug](your-issues-url) | [Request Feature](your-issues-url)**
 
 Developed with precision and care
 
