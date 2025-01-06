@@ -1,12 +1,12 @@
 # Interactive Collaborative Whiteboard
 
-Transform your virtual collaboration with our intuitive, real-time collaborative whiteboard application. Experience seamless digital interaction where teams can brainstorm, sketch, and communicate ideas effortlessly.
+Transform your virtual collaboration with this intuitive, real-time collaborative whiteboard application. Experience seamless digital interaction where teams can brainstorm, sketch, and communicate ideas effortlessly.
 
 **Live Demo:** [Try it now](https://collaborative-whiteboard-bfk0.onrender.com)
 
 ## Overview
 
-Our collaborative whiteboard platform enables teams to work together in real time, breaking down the barriers of remote collaboration. Whether you're teaching, brainstorming, or planning projects, our platform provides the tools you need for effective visual communication.
+This collaborative whiteboard platform enables teams to work together in real time, breaking down the barriers of remote collaboration. Whether you're teaching, brainstorming, or planning projects, this platform provides the tools you need for effective visual communication.
 
 ## Core Capabilities
 
@@ -24,7 +24,7 @@ Our collaborative whiteboard platform enables teams to work together in real tim
 - **Color Selection**: Comprehensive palette for vivid visualizations
 
 ### Collaboration Features
-Our platform excels in real-time collaboration:
+This platform excels in real-time collaboration:
 - Instantaneous synchronization across all participants
 - Reliable connection management
 - Smooth, lag-free drawing experience
