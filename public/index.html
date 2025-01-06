@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiteboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+
+    
+    <script src="https://kit.fontawesome.com/8585c17760.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Tools section -->
+        <div class="tools-bar">
+            <button class="open-tools" title="Tools">
+                <img src="assets/icons/menu.png" style="height: 40px; width: 40px;" class="open"/>
+                <img src="assets/icons/exit.png" class="close"/>
+            </button>
+
+            <div class="tools">
+
+                <!-- Pens -->
+                <button class="tool-btn pen" id="pen" title="Pen">
+                    <span><img src="assets/icons/pen.png" style="height: 20px; width: 20px;"></span>
+                    <i class="fa fa-angle-down"></i>
+                </button>
+
+                <div id="pen-dropdown" class="dropdown">
+                    <div class="dropdown-items">
+                        <input type="range" id="pen-width" min="1" max="50" value="7">
+                        <span class="pen-width-value" style="display: none;">7</span>
+                    </div>
+                    <div class="dropdown-items">
+                        <button class="color-switch selected-color" style="background: #000000;" data-color="#000000"></button>
+                        <button class="color-switch" style="background: #FF0000;" data-color="#FF0000"></button>
+                        <button class="color-switch" style="background: #00FF00;" data-color="#00FF00"></button>
+                        <button class="color-switch" style="background: #0000FF;" data-color="#0000FF"></button>
+                        <button class="color-switch" style="background: #FFFFFF;" data-color="#FFFFFF"></button>
+                        <button class="color-switch" style="background: #FF00FF;" data-color="#FF00FF"></button>
+                        <button class="color-switch" style="background: #00FFFF;" data-color="#00FFFF"></button>
+                    </div>
+                    <div class="dropdown-items-btn">
+                        <button class="other-tools" id="pen"><i class="fa-solid fa-pencil"></i> Pen</button>
+                        <button class="other-tools" id="pointer"><i class="fa-solid fa-circle"></i> Pointer</button>
+                        <button class="other-tools" id="eraser"><i class="fa-solid fa-eraser"></i> Eraser</button>
+                        <button class="other-tools" id="trash"><i class="fa-solid fa-trash"></i> Erase All</button>
+                        <button class="other-tools" id="shape"><i class="fa-solid fa-shapes"></i> Shapes</button>
+                        <select id="shape-select" style="display: none;">
+                            <option value="rectangle">Rectangle</option>
+                            <option value="circle">Circle</option>
+                            <option value="line">Line</option>
+                            <option value="triangle">Triangle</option>
+                        </select>
+                        <button class="other-tools" id="text"><i class="fa-solid fa-font"></i> Text</button>
+                        <button class="other-tools" id="save"><i class="fa-solid fa-download"></i> Save</button>
+                        <button class="other-tools" id="voice">
+                            <i class="fa-solid fa-microphone"></i> Start Recording
+                        </button>
+                        <div id="voice-status" class="voice-status" style="display: none;"></div>
+                    </div>
+                </div>
+
+                <!-- Undo -->
+                <button class="tool-btn undo" id="undo" title="Undo">
+                    <span><img src="assets/icons/undo.png"></span>
+                </button>
+
+                <!-- Redo -->
+                <button class="tool-btn redo" id="redo" title="Redo">
+                    <span style="transform: scaleX(-1);"><img src="assets/icons/undo.png"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-area">
+            <div class="content-section" id="content-area">
+                <canvas id="whiteboard"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="overdiv">
+        <div class="popup alert">
+            <img src="assets/icons/alert.gif" alt="Alert">
+            <p>User took out his wand...</p>
+            <div class="overBtns">
+                <button id="yesBtn">Evanesco!</button>
+                <button id="noBtn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js" integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script src="drawFunctions.js"></script>
+    <script src="features.js"></script>
+    <script src="voiceNotes.js"></script>
+</body>
+</html>
